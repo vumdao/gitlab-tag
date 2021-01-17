@@ -1,0 +1,15 @@
+build:
+  stage: build
+  before_script:
+    - project_url=$(echo $CI_PROJECT_URL | sed 's/https:\/\///')
+    - git remote set-url origin https://oauth2:$GITLAB_TOKEN@$project_url
+  script:
+    - echo "Build and tag the commit"
+    - tag=1.0-${CI_COMMIT_SHORT_SHA}
+    - git tag $tag
+    - git push origin $tag
+  only:
+    refs:
+      - tagme
+  tags:
+    - gitlab-runner
