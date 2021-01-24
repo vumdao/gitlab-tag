@@ -8,7 +8,7 @@
 </h1>
 
 <h2>
-Any commits should be tagged align with build version especially `master` branch. How to configure Gitlab runner to do this?
+Any commits should be tagged align with build version especially master branch. How to configure Gitlab runner to do this?
 </h2>
 
 ## What’s In This Document 
@@ -17,7 +17,7 @@ Any commits should be tagged align with build version especially `master` branch
 
 ### 🚀 **[What is the usecase](#-What-is-the-usecase)**
 - Developer tells gitlab runner to tag the commit and publish the tag
-[.gitlab-ci.yml]()
+[.gitlab-ci.yml](https://github.com/vumdao/gitlab-tag/blob/master/.gitlab-ci.yml)
 ```
 build:
   stage: build
